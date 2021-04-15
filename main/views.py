@@ -1,26 +1,31 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import *
 
 #pagina iniziale
 def index(request):
-    return HttpResponse('index')
+    context={}
+    return render(request, 'index.html', context)
 
 
 #pagina menu
 def menu(request):
-    return HttpResponse('menu')
+    context={}
+    return render(request, 'menu.html', context)
 
 
 #pagina portfolio
 def portfolio(request):
-    return HttpResponse('portfolio')
+    context={}
+    return render(request, 'portfolio.html', context)
 
 
 #pagina about
 def about(request):
-    return HttpResponse('about')
+    context={}
+    return render(request, 'about.html', context)
     
 
 #pagina contacts
 def contacts(request):
-    return HttpResponse('contacts')
+    context={}
+    return render(request, 'contacts.html', context)
