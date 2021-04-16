@@ -13,7 +13,30 @@
     </head>
     <body>
         
-        {% include 'navbar.html' %}
+        <nav class="navbar navbar-expand-sm navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'sito' %}">GIULIO PIERINI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 150px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}"><u>about</u></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'portfolio' %}">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contacts' %}" >contacts</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        
         <div class="container">
             <div class="img_profilo container-fluid px-0">
                 <img class="mx-auto d-block img-fluid" src="{{ media_url }}{{ photo.url_immagine }}">
