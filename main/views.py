@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.conf import settings
 
 #pagina iniziale
 def index(request):
@@ -21,7 +22,11 @@ def portfolio(request):
 
 #pagina about
 def about(request):
-    context={}
+    photo = Photo.objects.get(ruolo='immagine_profilo')
+    context={
+        'photo':photo,
+        'media_url':settings.MEDIA_URL,
+    }
     return render(request, 'about.html', context)
     
 
