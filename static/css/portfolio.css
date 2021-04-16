@@ -1,0 +1,13 @@
+.columns{
+    display: flex;
+}
+.column{
+    flex:50%;
+    display:flex;
+    flex-flow: column;
+}
+.column p{
+    display:block;
+    width:90%;
+    margin:auto;
+}
