@@ -1,21 +1,3 @@
-#overlay{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: column;
-    color:white;
-    background-color: rgb(182, 182, 182);
-    width:100vw;
-    height:100vh;
-    z-index: 3;
-    opacity: 0.75;
-    position:absolute;
-    overflow: hidden;
-    white-space: nowrap;
-}
-#overlay h1{
-    font-size: 7em;
-}
 html body{
     width:100vw;
     height: 100vh;
@@ -66,12 +48,8 @@ a:focus:hover
         font-size: 2.5em;
     }
     .menu{
-        column-count: 1;
-    }
-    .about_page{
-        display:none;
-    }
-    .contacts_page{
-        display:none;
+        column-count: 0;
+        display:flex;
+        flex-flow: column;
     }
 }
