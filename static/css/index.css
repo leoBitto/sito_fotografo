@@ -10,10 +10,11 @@
     z-index: 3;
     opacity: 0.75;
     position:absolute;
+    overflow: hidden;
+    white-space: nowrap;
 }
-.overlay button{
-    color:white;
-    text-decoration: none;
+#overlay h1{
+    font-size: 7em;
 }
 html body{
     width:100vw;
@@ -41,6 +42,7 @@ a:active,
 a:focus, 
 a:focus:hover
 {
+    color:white !important;
     text-decoration: none !important;
 }
 .about_page{

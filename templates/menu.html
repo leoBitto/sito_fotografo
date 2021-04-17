@@ -11,27 +11,20 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        
-        <!-- overlay -->
-        <div id="overlay">
-            <h1>GIULIO PIERINI</h1>
-            <a href="{% url 'menu' %}"><h3>[enter]</h3></a>
-            <h1>PHOTOGRAPHY</h1>
-        </div>
-        
+                
         <!-- menu -->
         <div class="menu">
 
             <div class="column about_page">
-              
+                <a href="{% url 'about' %}"><h2>about</h2></a>
             </div>
 
             <div class="column portfolio_page">
-               
+                <a href="{% url 'portfolio' %}"><h2>portfolio</h2></a>
             </div>
 
             <div class="column contacts_page">
-               
+                <a href="{% url 'contacts' %}"><h2>contacts</h2></a>
             </div>
 
         </div>
