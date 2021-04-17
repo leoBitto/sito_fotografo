@@ -1,0 +1,54 @@
+#overlay{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    color:white;
+    background-color: rgb(182, 182, 182);
+    width:100vw;
+    height:100vh;
+    z-index: 3;
+    opacity: 0.75;
+    position:absolute;
+}
+.overlay button{
+    color:white;
+    text-decoration: none;
+}
+html body{
+    width:100vw;
+    height: 100vh;
+}
+.menu{
+    column-count: 3;
+    column-gap: 0;
+    height:100vh;
+}
+.column{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.column h2{
+    text-decoration: none;
+    color:white;
+}
+a:hover,
+a:visited,
+a:link, 
+a:active, 
+a:focus, 
+a:focus:hover
+{
+    text-decoration: none !important;
+}
+.about_page{
+    background-color: blue;
+}
+.contacts_page{
+    background-color: brown;
+}
+.portfolio_page{
+    background: chocolate;
+}
