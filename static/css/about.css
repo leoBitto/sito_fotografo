@@ -14,8 +14,18 @@ html body{
     color: white !important;
 }
 
+.img_profilo{
+    display: flex;
+    justify-content: center;
+}
+
 .img_profilo img{
     width:80%;
+}
+
+#content{
+    display:flex;
+    flex-flow: row-reverse;
 }
 
 .bio{
@@ -32,4 +42,8 @@ html body{
     .insta_logo img{
         width:12%;
     }
+    #content{
+        flex-flow:column;
+    }
+
 }
