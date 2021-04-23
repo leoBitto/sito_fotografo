@@ -1,6 +1,17 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
 html body{
     background-image: url('../images/scacchiera.jpg');
     background-repeat: repeat;
+    font-family: "Neue";
+    color: white;
+}
+.navbar a{
+    font-family: "Neue" !important;
+    color: white !important;
 }
 
 .contact{

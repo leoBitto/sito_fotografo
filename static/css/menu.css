@@ -1,6 +1,13 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
 html body{
     width:100vw;
     height: 100vh;
+    font-family: "Neue";
+    color: white;
 }
 .menu{
     column-count: 3;
@@ -16,6 +23,7 @@ html body{
 .column h2{
     text-decoration: none;
     color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 a:hover,
 a:visited,

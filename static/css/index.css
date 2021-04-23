@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
+html body{
+    width:100vw;
+    height: 100vh;
+    font-family: "Neue";
+    color: white;
+}
+
 #overlay{
     display: flex;
     justify-content: space-around;
@@ -11,12 +23,18 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+#boverlay{
+    background-image: url('../images/scacchiera_grossa.jpg');
+    opacity:0.35;
+}
+
 #overlay h1{
     font-size: 7em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-html body{
-    width:100vw;
-    height: 100vh;
+#overlay h3{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .menu{
     column-count: 3;
