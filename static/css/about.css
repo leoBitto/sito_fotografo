@@ -1,4 +1,9 @@
 
+html body{
+    background-image: url('../images/scacchiera.jpg');
+    background-repeat: repeat;
+}
+
 .img_profilo img{
     width:80%;
 }

@@ -1,3 +1,8 @@
+html body{
+    background-image: url('../images/scacchiera.jpg');
+    background-repeat: repeat;
+}
+
 .columns{
     display: flex;
 }

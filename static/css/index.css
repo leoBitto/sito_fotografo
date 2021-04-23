@@ -4,11 +4,9 @@
     align-items: center;
     flex-flow: column;
     color:white;
-    background-color: rgb(182, 182, 182);
     width:100vw;
     height:100vh;
     z-index: 3;
-    opacity: 0.75;
     position:absolute;
     overflow: hidden;
     white-space: nowrap;
@@ -24,6 +22,7 @@ html body{
     column-count: 3;
     column-gap: 0;
     height:100vh;
+    opacity: 0.75;
 }
 .column{
     display:flex;
@@ -45,14 +44,24 @@ a:focus:hover
     color:white !important;
     text-decoration: none !important;
 }
+
 .about_page{
-    background-color: blue;
+    background-image: url('../images/about-sito.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .contacts_page{
-    background-color: brown;
+    background-image: url('../images/contact-sito-web.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .portfolio_page{
-    background: chocolate;
+    background-image: url('../images/portfolio-sito-web.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media only screen and (max-width: 768px) {

@@ -28,13 +28,22 @@ a:focus:hover
     text-decoration: none !important;
 }
 .about_page{
-    background-color: blue;
+    background-image: url('../images/about-sito.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .contacts_page{
-    background-color: brown;
+    background-image: url('../images/contact-sito-web.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .portfolio_page{
-    background: chocolate;
+    background-image: url('../images/portfolio-sito-web.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media only screen and (max-width: 768px) {
