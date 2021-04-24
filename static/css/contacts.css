@@ -28,9 +28,10 @@ html body{
 }
 
 .insta_logo img{
-   width:5%;
+   width:3%;
    margin-top: 75px;
    margin-bottom: 100px;
+   
 }
 
 @media only screen and (max-width:425px){

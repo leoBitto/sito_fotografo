@@ -32,10 +32,11 @@ html body{
     align-items: center;
 }
 
+
 .insta_logo img{
-   width:5%;
+   width:3%;
    margin-top: 75px;
-   margin-bottom: 100px;
+   margin-bottom: 50px;
 }
 
 @media only screen and (max-width:425px){
@@ -45,5 +46,5 @@ html body{
     #content{
         flex-flow:column;
     }
-
+ 
 }
