@@ -17,6 +17,7 @@ html body{
 .contact{
    text-align: center;
    margin-top: 30px;
+   font-size: 1.5em;
 }
 .container{
     position:relative;
@@ -37,5 +38,8 @@ html body{
 @media only screen and (max-width:425px){
     .insta_logo img{
         width:12%;
+    }
+    .contact{
+        font-size: 1em;
     }
 }

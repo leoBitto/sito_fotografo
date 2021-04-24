@@ -22,11 +22,16 @@ html body{
     display:flex;
     flex-flow: column;
 }
-.column p{
+.column img{
     display:block;
-    width:90%;
-    margin:auto;
+    width:100%;
 }
+
+.insta_logo img{
+    width:3%;
+    margin-top: 75px;
+    margin-bottom: 50px;
+ }
 
 @media only screen and (max-width:425px){
     .columns{
