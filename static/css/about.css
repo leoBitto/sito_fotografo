@@ -41,7 +41,7 @@ html body{
 
 @media only screen and (max-width:425px){
     .insta_logo img{
-        width:12%;
+        width:8%;
     }
     #content{
         flex-flow:column;

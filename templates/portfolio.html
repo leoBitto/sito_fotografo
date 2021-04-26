@@ -40,15 +40,19 @@
         
         <div class="container columns">
             <div class="column">
-                <!-- inserisci ciclo for -->
-                {% for foto in foto_pari %}
-                    <img src="{{ media_url }}{{ foto.url_immagine }}">
-                {% endfor %}
-            </div>
-            <div class="column">
+                <h1> foto dispari</h1>
                 <!-- inserisci ciclo for -->
                 {% for foto in foto_dispari %}
                     <img src="{{ media_url }}{{ foto.url_immagine }}">
+                    <h2>{{foto.posizione}}</h2>
+                {% endfor %}
+            </div>
+            <div class="column">
+                <h1> foto pari</h1>
+                <!-- inserisci ciclo for -->
+                {% for foto in foto_pari %}
+                    <img src="{{ media_url }}{{ foto.url_immagine }}">
+                    <h2>{{foto.posizione}}</h2>
                 {% endfor %}
             </div>
         </div>

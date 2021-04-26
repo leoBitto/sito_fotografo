@@ -28,6 +28,15 @@ def portfolio(request):
             foto_pari.append(photo)   # aggiungi a foto pari
         else:
             foto_dispari.append(photo)# aggiungi a foto dispari
+            
+    # sort in pari e dispari
+    print("dispari:")
+    for f in foto_dispari:
+        print(f.posizione)
+    
+    print("pari:")
+    for f in foto_pari:
+        print(f.posizione)
 
     # inserisci i dizionari nel context
     context={
