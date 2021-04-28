@@ -4,14 +4,9 @@
 }
 
 html body{
-    background-image: url('../images/scacchiera.jpg');
-    background-repeat: repeat;
+    background-color: rgb(124, 124, 124);
     font-family: "Neue";
     color: white;
-}
-.navbar a{
-    font-family: "Neue" !important;
-    color: white !important;
 }
 
 .contact{

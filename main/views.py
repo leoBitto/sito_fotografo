@@ -7,7 +7,11 @@ def index(request):
     context={}
     return render(request, 'index.html', context)
 
+#navdev
+def navdev(request):
+    return render(request, 'navbar.html', {})
 
+    
 #pagina menu
 def menu(request):
     context={}

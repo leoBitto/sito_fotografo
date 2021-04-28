@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "Neue";
-    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+    font-family: "Win";
+    src:url('../fonts/w95fa.woff');
 }
 
 html body{
     width:100vw;
     height: 100vh;
-    font-family: "Neue";
+    font-family: "Win";
     color: white;
 }
 .menu{
@@ -21,6 +21,7 @@ html body{
     height: 100%;
 }
 .column h2{
+    font-size:3em;
     text-decoration: none;
     color:white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;

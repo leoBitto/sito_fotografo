@@ -4,19 +4,19 @@
 }
 
 html body{
-    background-image: url('../images/scacchiera.jpg');
-    background-repeat: repeat;
+    background-color: rgb(124, 124, 124);
     font-family: "Neue";
     color: white;
 }
-.navbar a{
-    font-family: "Neue" !important;
-    color: white !important;
+.container{
+    position:relative;
+    height: 90vh;
 }
 
 .img_profilo{
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 .img_profilo img{
@@ -26,12 +26,16 @@ html body{
 #content{
     display:flex;
     flex-flow: row-reverse;
+    margin-top:4em;
 }
 
 .bio{
     align-items: center;
 }
-
+.insta_logo{
+    position: absolute;
+    bottom: 10px;
+}
 
 .insta_logo img{
    width:3%;
@@ -39,7 +43,7 @@ html body{
    margin-bottom: 50px;
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:768px){
     .insta_logo img{
         width:8%;
     }

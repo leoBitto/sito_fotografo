@@ -25,15 +25,19 @@ html body{
 }
 
 #boverlay{
-    background-image: url('../images/scacchiera_grossa.jpg');
-    opacity:0.35;
+    background-image: url('../images/scacchiera2.jpeg');
+    filter: grayscale(100%) brightness(50%);
+    opacity:0.8;
 }
 
 #overlay h1{
-    font-size: 7em;
+    color:white;
+    font-size: 8em;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #overlay h3{
+    color:white;
+    font-size:2.5em;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .menu{
@@ -50,7 +54,7 @@ html body{
 }
 .column h2{
     text-decoration: none;
-    color:white;
+    color:yellow;
 }
 a:hover,
 a:visited,

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+    font-family: "Win";
+    src:url('../fonts/w95fa.woff');
+}
+.navbar a{
+    color:black !important;
+}
+.navbar{
+    width: 100vw;
+    height: 45px;
+    padding: 0px !important;
+    font-family: "Win";
+    color:black;
+    background-color: rgb(247, 247, 247);
+}
+.container-fluid{
+    padding:0px !important;
+}
+.navbar-brand{
+    width:50%;
+    padding-left: 10px;
+}
+.navbar-nav{
+    width:100%;
+    background-color: rgb(247, 247, 247);
+}
+.collapse{
+    justify-content: flex-end;
+}
+
+.box{
+    width:33%;
+    box-shadow: 
+        5px 0px 2.2px rgba(0, 0, 0, 0.034) inset
+}
+.box:hover{
+    background-color: rgb(100,100,100);
+}
