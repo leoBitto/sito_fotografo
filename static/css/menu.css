@@ -6,26 +6,16 @@
 html body{
     width:100vw;
     height: 100vh;
-    font-family: "Win";
-    color: white;
 }
 .menu{
     column-count: 3;
     column-gap: 0;
-    height:100vh;
+    height:100%;
 }
 .column{
-    display:flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
 }
-.column h2{
-    font-size:3em;
-    text-decoration: none;
-    color:white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+
 a:hover,
 a:visited,
 a:link, 
@@ -33,9 +23,25 @@ a:active,
 a:focus, 
 a:focus:hover
 {
-    color:white !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-decoration: none !important;
 }
+.overlay{
+    height:100%;
+    width:100%;
+    font-size:3.5em;
+    font-family: "Win";
+    color:white !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.overlay:hover{
+    opacity:0;
+}
+
 .about_page{
     background-image: url('../images/about-sito.gif');
     background-size: cover;
