@@ -16,18 +16,27 @@
         <div class="menu">
 
             <div class="column about_page">
+                <video autoplay muted loop>
+                    <source src="{% static '/video/about.mp4' %}" type="video/mp4" />
+                </video>
                 <a class="overlay" href="{% url 'about' %}">
                     about
                 </a>
             </div>
 
             <div class="column portfolio_page">
+                <video autoplay muted loop>
+                    <source src="{% static '/video/portfolio.mp4' %}" type="video/mp4" />
+                </video>
                 <a class="overlay" href="{% url 'portfolio' %}">
                     portfolio
                 </a>
             </div>
 
             <div class="column contacts_page">
+                <video autoplay muted loop>
+                    <source src="{% static '/video/contact.mp4' %}" type="video/mp4" />
+                </video>
                 <a class="overlay" href="{% url 'contacts' %}">
                     contacts
                 </a>
