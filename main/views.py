@@ -6,11 +6,6 @@ from django.conf import settings
 def index(request):
     context={}
     return render(request, 'index.html', context)
-
-#navdev
-def navdev(request):
-    return render(request, 'navbar.html', {})
-
     
 #pagina menu
 def menu(request):
@@ -49,6 +44,15 @@ def portfolio(request):
         'media_url': settings.MEDIA_URL,
     }
     return render(request, 'portfolio.html', context)
+
+#foto ingrandita
+def photo(request, pk):
+    photo = Photo.objects.get(id=pk)
+    context = {
+        'foto':photo,
+        'media_url':settings.MEDIA_URL,
+    }
+    return render(request, 'photo.html', context)
 
 
 #pagina about
