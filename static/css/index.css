@@ -6,56 +6,27 @@
 html body{
     width:100vw;
     height: 100vh;
-    font-family: "Neue";
-    color: white;
 }
 
-#overlay{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: column;
-    color:white;
-    width:100vw;
-    height:100vh;
-    z-index: 3;
-    position:absolute;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-#boverlay{
-    background-image: url('../images/scacchiera2.jpeg');
-    filter: grayscale(100%) brightness(50%);
-    opacity:0.8;
-}
-
-#overlay h1{
-    color:white;
-    font-size: 8em;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-#overlay h3{
-    color:white;
-    font-size:2.5em;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
 .menu{
     column-count: 3;
     column-gap: 0;
     height:100vh;
-    opacity: 0.75;
+    z-index: 0;
 }
 .column{
-    display:flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
+    position:relative;
 }
-.column h2{
-    text-decoration: none;
-    color:yellow;
+.column video{
+    filter: grayscale(100%) brightness(50%);
+    width:100%;
+    height: 100%;
+    position:absolute;
+    object-fit: cover;
+    z-index: -1;
 }
+
 a:hover,
 a:visited,
 a:link, 
@@ -67,33 +38,60 @@ a:focus:hover
     text-decoration: none !important;
 }
 
-.about_page{
-    background-image: url('../images/about-sito.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.overlay{
+    height:100%;
+    width:100%;
+    font-family: "Neue";
+    color:white !important;
+    display:flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    text-align: center;
+    z-index: 2;
 }
-.contacts_page{
-    background-image: url('../images/contact-sito-web.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.overlay h1{
+    font-size: 7em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.portfolio_page{
-    background-image: url('../images/portfolio-sito-web.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.overlay h3{
+
+    font-size:2.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.filter_overlay{
+    opacity:0.4;
+    background-image: url('../images/scacchiera2.jpeg');
+    z-index:1;
+  
+}
+
+
+@media only screen and (max-width: 850px) {
+    .overlay h1{
+        font-size: 6em;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    #overlay h1{
+    .overlay h1{
+        font-size: 5em;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .overlay h1{
         font-size: 4em;
     }
 }
 
-@media only screen and (max-width: 425px) {
-    #overlay h1{
+@media only screen and (max-width: 500px) {
+    .overlay h1{
         font-size: 2.5em;
     }
     .menu{

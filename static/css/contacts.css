@@ -17,10 +17,9 @@ html body{
 .container{
     position:relative;
     height: 90vh;
-}
-.insta_logo{
-    position: absolute;
-    bottom: 10px;
+    display:flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
 
 .insta_logo img{
