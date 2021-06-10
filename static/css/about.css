@@ -8,13 +8,19 @@ html body{
     font-family: "Neue";
     color: white;
     width:100vw;
-}
-.container{
-    position:relative;
-    height: 90vh;
+    height:100vh;
     display:flex;
     flex-flow: column;
     justify-content: space-between;
+}
+
+#content{
+    z-index:-5;
+    display:flex;
+    flex-flow: row-reverse;
+    margin-top:4em;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .img_profilo{
@@ -36,18 +42,10 @@ html body{
 .bio{
     align-items: center;
 }
-.insta_logo img{
-   width:3%;
-   margin-top: 75px;
-   margin-bottom: 50px;
-}
 
 @media only screen and (max-width:768px){
-    .insta_logo img{
-        width:8%;
-    }
+   
     #content{
         flex-flow:column;
     }
- 
 }

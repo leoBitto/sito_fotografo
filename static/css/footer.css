@@ -1,0 +1,22 @@
+
+
+.footer p{
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+
+#myname{
+    color:white !important;
+}
+
+.insta_logo img{
+    width:30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width:500px){
+    .insta_logo img{
+        width:40px;
+    }
+}

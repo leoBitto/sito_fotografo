@@ -6,12 +6,13 @@
 }
 .navbar a{
     color:black !important;
+    font-size: 1.25em !important;
 }
 .navbar{
     width: 100vw;
-    height: 45px;
     padding: 0px !important;
     font-family: "Win";
+    font-size: 1.25em;
     color:black;
     background-color: rgb(247, 247, 247);
 }
