@@ -17,7 +17,6 @@ def menu(request):
 def portfolio(request):
     # richiama tutte le foto portfolio
     photo_portfolio = Photo.objects.filter(ruolo='foto_portfolio')
-    print(photo_portfolio)
 
     # dividile in due queryset, pari e dispari
     foto_pari =[]
@@ -27,15 +26,6 @@ def portfolio(request):
             foto_pari.append(photo)   # aggiungi a foto pari
         else:
             foto_dispari.append(photo)# aggiungi a foto dispari
-            
-    # sort in pari e dispari
-    print("dispari:")
-    for f in foto_dispari:
-        print(f.posizione)
-    
-    print("pari:")
-    for f in foto_pari:
-        print(f.posizione)
 
     # inserisci i dizionari nel context
     context={
@@ -58,8 +48,10 @@ def photo(request, pk):
 #pagina about
 def about(request):
     photo = Photo.objects.get(ruolo='immagine_profilo')
+    description = Description.objects.all()
     context={
         'photo':photo,
+        'description':description,
         'media_url':settings.MEDIA_URL,
     }
     return render(request, 'about.html', context)

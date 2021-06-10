@@ -81,18 +81,13 @@ a:focus:hover
     .overlay h1{
         font-size: 5em;
     }
+
 }
 
 
 @media only screen and (max-width: 650px) {
     .overlay h1{
         font-size: 4em;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .overlay h1{
-        font-size: 2.5em;
     }
     .menu{
         column-count: 1;
@@ -103,4 +98,11 @@ a:focus:hover
     .contacts_page{
         display:none;
     }
+}
+
+@media only screen and (max-width: 500px) {
+    .overlay h1{
+        font-size: 2.5em;
+    }
+    
 }

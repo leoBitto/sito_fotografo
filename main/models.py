@@ -8,3 +8,6 @@ class Photo(models.Model):
 
     class Meta:
         ordering = ['posizione']
+
+class Description(models.Model):
+    testo = models.TextField(blank=True, null=True)
