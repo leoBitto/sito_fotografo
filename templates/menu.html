@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{% static '/css/menu.css' %}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-    <body>
+    <body onload="myFunction()">
         <!-- menu -->
         <div class="menu">
 
@@ -67,8 +67,55 @@
                 }).appendTo(video);
                 video.appendTo($('.menu'));
             }
-            
-            
         </script>
+        <script>
+            //check browser type if safari or firefox
+            // togli i video tag nelle column 
+            // aggiungi gifs come sfondo alle pagine
+            function myFunction() { 
+                if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+                {
+                   
+                }
+                else if(navigator.userAgent.indexOf("Chrome") != -1 )
+                {
+                   
+                }
+                else if(navigator.userAgent.indexOf("Safari") != -1)
+                {
+                    $('.video').remove();
+                    $('.about_page').css("background-image",  "url({% static '/video/about.gif' %}");
+                    $('.about_page').css("background-size",  "cover");
+
+                    $('.portfolio_page').css("background-image",  "url({% static '/video/portfolio.gif' %})");
+                    $('.portfolio_page').css("background-size",  "cover");
+                    
+                    $('.contacts_page').css("background-image",  "{% static '/video/contact.gif' %}");
+                    $('.contacts_page').css("background-size",  "cover");
+                    
+                }
+                else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+                {
+                    $('.video').remove();
+                    $('.about_page').css("background-image",  "url({% static '/video/about.gif' %})");
+                    $('.about_page').css("background-size",  "cover");
+                
+                    $('.portfolio_page').css("background-image",  "url({% static '/video/portfolio.gif' %})");
+                    $('.portfolio_page').css("background-size",  "cover");
+                    
+                    $('.contacts_page').css("background-image",  "url({% static '/video/contact.gif' %})");
+                    $('.contacts_page').css("background-size",  "cover");
+                    
+                }
+                else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+                {
+                    
+                }  
+                else 
+                {
+                    
+                }
+            }
+            </script>
     </body>
 </html>
