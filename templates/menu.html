@@ -52,7 +52,7 @@
             // controlla se sei sotto i 650px
             if($(window).width() < 650){
                 // leva tutti e tre i video
-                $(".video").remove()
+                document.getElementByClassName("video").remove()
                 // aggiungi video come sfondo a menu
                 var video = $('<video />', {
                     class: 'video',
@@ -83,28 +83,28 @@
                 }
                 else if(navigator.userAgent.indexOf("Safari") != -1)
                 {
-                    $('.video').remove();
-                    $('.about_page').css("background-image",  "url({% static '/video/about.gif' %}");
-                    $('.about_page').css("background-size",  "cover");
+                    document.getElementByClassName('video').remove();
+                    document.getElementByClassName('about_page').style.background-image = "url({% static '/video/about.gif' %})";
+                    document.getElementByClassName('about_page').style.background-size = "cover";
 
-                    $('.portfolio_page').css("background-image",  "url({% static '/video/portfolio.gif' %})");
-                    $('.portfolio_page').css("background-size",  "cover");
+                    document.getElementByClassName('portfolio_page').style.background-image = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementByClassName('.portfolio_page').style.background-size = "cover";
                     
-                    $('.contacts_page').css("background-image",  "url({% static '/video/contact.gif' %})");
-                    $('.contacts_page').css("background-size",  "cover");
+                    document.getElementByClassName('contacts_page').style.background-image = "url({% static '/video/contact.gif' %})";
+                    document.getElementByClassName('contacts_page').style.background-size = "cover";
                     
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
-                    $('.video').remove();
-                    $('.about_page').css("background-image",  "url({% static '/video/about.gif' %})");
-                    $('.about_page').css("background-size",  "cover");
-                
-                    $('.portfolio_page').css("background-image",  "url({% static '/video/portfolio.gif' %})");
-                    $('.portfolio_page').css("background-size",  "cover");
+                    document.getElementByClassName('video').remove();
+                    document.getElementByClassName('about_page').style.background-image = "url({% static '/video/about.gif' %})";
+                    document.getElementByClassName('about_page').style.background-size = "cover";
+
+                    document.getElementByClassName('portfolio_page').style.background-image = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementByClassName('.portfolio_page').style.background-size = "cover";
                     
-                    $('.contacts_page').css("background-image",  "url({% static '/video/contact.gif' %})");
-                    $('.contacts_page').css("background-size",  "cover");
+                    document.getElementByClassName('contacts_page').style.background-image = "url({% static '/video/contact.gif' %})";
+                    document.getElementByClassName('contacts_page').style.background-size = "cover";
                     
                 }
                 else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
