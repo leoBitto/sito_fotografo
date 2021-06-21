@@ -15,7 +15,7 @@
         <!-- menu -->
         <div id="menu">
 
-            <div class="column" id="about_page">
+            <div class="column about_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/about.mp4' %}" type="video/mp4" />
                 </video>
@@ -24,7 +24,7 @@
                 </a>
             </div>
 
-            <div class="column" id="portfolio_page">
+            <div class="column portfolio_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/portfolio.mp4' %}" type="video/mp4" />
                 </video>
@@ -33,7 +33,7 @@
                 </a>
             </div>
 
-            <div class="column" id="contacts_page">
+            <div class="column contacts_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/contact.mp4' %}" type="video/mp4" />
                 </video>
@@ -83,28 +83,28 @@
                 {
                     var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementById('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementById('about_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('about_page')[0].style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
 
-                    document.getElementById('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementById('.portfolio_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementsByClassName('.portfolio_page')[0].style.backgroundSize = "cover";
                     
-                    document.getElementById('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementById('contacts_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
                     
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
                     var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementById('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementById('about_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('about_page')[0].style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
 
-                    document.getElementById('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementById('.portfolio_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementsByClassName('.portfolio_page')[0].style.backgroundSize = "cover";
                     
-                    document.getElementById('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementById('contacts_page').style.backgroundSize = "cover";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
                     
                 }
                 else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10

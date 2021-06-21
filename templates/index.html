@@ -68,29 +68,29 @@
                 {
                     var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementByClassName('about_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('about_page').style.filter = "grayscale(100%)";
-                    document.getElementByClassName('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementByClassName('portfolio_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('portfolio_page').style.filter = "grayscale(100%)";
-                    document.getElementByClassName('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementByClassName('contacts_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('contacts_page').style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('about_page')[0].style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('about_page')[0].style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('portfolio_page')[0].style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('contacts_page')[0].style.filter = "grayscale(100%)";
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
                     var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementByClassName('about_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('about_page').style.filter = "grayscale(100%)";
-                    document.getElementByClassName('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementByClassName('portfolio_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('portfolio_page').style.filter = "grayscale(100%)";
-                    document.getElementByClassName('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementByClassName('contacts_page').style.backgroundSize = "cover";
-                    document.getElementByClassName('contacts_page').style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('about_page')[0].style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('about_page')[0].style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementsByClassName('portfolio_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('portfolio_page')[0].style.filter = "grayscale(100%)";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
+                    document.getElementsByClassName('contacts_page')[0].style.filter = "grayscale(100%)";
                 }
                 else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
                 {

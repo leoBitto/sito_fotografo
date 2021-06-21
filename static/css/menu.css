@@ -76,13 +76,13 @@ a:focus:hover
     .overlay{
         background-color: transparent;
     }
-    #about_page{
+    .about_page{
         background-image: none;
     }
-    #contacts_page{
+    .contacts_page{
         background-image: none;
     }
-    #portfolio_page{
+    .portfolio_page{
         background-image: none;
     }
 }
