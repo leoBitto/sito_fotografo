@@ -7,7 +7,7 @@ html body{
     width:100vw;
     height: 100vh;
 }
-.menu{
+#menu{
     -moz-column-count: 3;
          column-count: 3;
     -moz-column-gap: 0;
@@ -65,7 +65,7 @@ a:focus:hover
 }
 
 @media only screen and (max-width: 650px) {
-    .menu{
+    #menu{
         -moz-column-count: 0;
              column-count: 0;
         -moz-column-gap: 0;
@@ -76,13 +76,13 @@ a:focus:hover
     .overlay{
         background-color: transparent;
     }
-    .about_page{
+    #about_page{
         background-image: none;
     }
-    .contacts_page{
+    #contacts_page{
         background-image: none;
     }
-    .portfolio_page{
+    #portfolio_page{
         background-image: none;
     }
 }

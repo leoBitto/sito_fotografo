@@ -13,9 +13,9 @@
     </head>
     <body onload="myFunction()">
         <!-- menu -->
-        <div class="menu">
+        <div id="menu">
 
-            <div class="column about_page">
+            <div class="column" id="about_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/about.mp4' %}" type="video/mp4" />
                 </video>
@@ -24,7 +24,7 @@
                 </a>
             </div>
 
-            <div class="column portfolio_page">
+            <div class="column" id="portfolio_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/portfolio.mp4' %}" type="video/mp4" />
                 </video>
@@ -33,7 +33,7 @@
                 </a>
             </div>
 
-            <div class="column contacts_page">
+            <div class="column" id="contacts_page">
                 <video class="video" autoplay muted loop>
                     <source src="{% static '/video/contact.mp4' %}" type="video/mp4" />
                 </video>
@@ -52,7 +52,7 @@
             // controlla se sei sotto i 650px
             if(window.innerWidth < 650){
                 // leva tutti e tre i video
-                var videos = document.getElementByClassName("video")
+                var videos = document.getElementsByClassName("video")
                 while(videos.length > 0) videos[0].remove()
                 // aggiungi video come sfondo a menu
                 // crea video tag
@@ -63,7 +63,7 @@
                 video.loop = true;
                 video.classList.add("video");
                 //appendi a menu
-                document.getElementByClassName('menu')[0].appendChild(video);
+                document.getElementById('menu')[0].appendChild(video);
             }
         </script>
         <script>
@@ -81,30 +81,30 @@
                 }
                 else if(navigator.userAgent.indexOf("Safari") != -1)
                 {
-                    var videos = document.getElementByClassName('video');
+                    var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementByClassName('about_page').style.backgroundSize = "cover";
+                    document.getElementById('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementById('about_page').style.backgroundSize = "cover";
 
-                    document.getElementByClassName('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementByClassName('.portfolio_page').style.backgroundSize = "cover";
+                    document.getElementById('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementById('.portfolio_page').style.backgroundSize = "cover";
                     
-                    document.getElementByClassName('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementByClassName('contacts_page').style.backgroundSize = "cover";
+                    document.getElementById('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementById('contacts_page').style.backgroundSize = "cover";
                     
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
-                    var videos = document.getElementByClassName('video');
+                    var videos = document.getElementsByClassName('video');
                     while(videos.length > 0) videos[0].remove();
-                    document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
-                    document.getElementByClassName('about_page').style.backgroundSize = "cover";
+                    document.getElementById('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
+                    document.getElementById('about_page').style.backgroundSize = "cover";
 
-                    document.getElementByClassName('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
-                    document.getElementByClassName('.portfolio_page').style.backgroundSize = "cover";
+                    document.getElementById('portfolio_page').style.backgroundImage = "url({% static '/video/portfolio.gif' %})";
+                    document.getElementById('.portfolio_page').style.backgroundSize = "cover";
                     
-                    document.getElementByClassName('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
-                    document.getElementByClassName('contacts_page').style.backgroundSize = "cover";
+                    document.getElementById('contacts_page').style.backgroundImage = "url({% static '/video/contact.gif' %})";
+                    document.getElementById('contacts_page').style.backgroundSize = "cover";
                     
                 }
                 else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
