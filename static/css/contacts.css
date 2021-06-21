@@ -9,8 +9,13 @@ html body{
     color: white;
     width: 100vw;
     height:100vh;
-    display:flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: column;
     flex-flow: column;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
 }
 
@@ -22,8 +27,13 @@ html body{
 .container{
     position:relative;
     height: 90vh;
-    display:flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: column;
     flex-flow: column;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 

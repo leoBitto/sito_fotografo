@@ -13,8 +13,11 @@ html body{
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: column;
     flex-flow: column;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    
 }
 
 #content{
@@ -23,7 +26,8 @@ html body{
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    flex-flow: row-reverse;
+    -webkit-flex-flow: row-reverse;
+    flex-flow:row-reverse;
     margin-top:4em;
     margin-left: 10%;
     margin-right: 10%;
@@ -34,6 +38,7 @@ html body{
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content:center;
     justify-content: center;
     z-index: -1;
 }
@@ -47,8 +52,9 @@ html body{
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow:row-reverse;
     flex-flow: row-reverse;
-    margin-top:4em;
+    margin-top: 4em;
 }
 
 .bio{
@@ -58,6 +64,7 @@ html body{
 @media only screen and (max-width:768px){
    
     #content{
+        -webkit-flex-flow:column;
         flex-flow:column;
     }
 }

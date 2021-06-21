@@ -44,8 +44,13 @@ a:focus:hover
     font-size:3.5em;
     font-family: "Win";
     color:white !important;
-    display:flex;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     position:relative;
     text-align: center;
@@ -70,7 +75,12 @@ a:focus:hover
              column-count: 0;
         -moz-column-gap: 0;
              column-gap: 0;
-        display:flex;
+        
+        display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+        -webkit-flex-flow: column;
         flex-flow: column;
     }
     .overlay{
