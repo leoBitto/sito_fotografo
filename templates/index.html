@@ -66,7 +66,8 @@
                 }
                 else if(navigator.userAgent.indexOf("Safari") != -1)
                 {
-                    document.getElementByClassName('video').remove();
+                    var videos = document.getElementByClassName('video');
+                    while(videos.length > 0) videos[0].remove();
                     document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
                     document.getElementByClassName('about_page').style.backgroundSize = "cover";
                     document.getElementByClassName('about_page').style.filter = "grayscale(100%)";
@@ -79,7 +80,8 @@
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
-                    document.getElementByClassName('video').remove();
+                    var videos = document.getElementByClassName('video');
+                    while(videos.length > 0) videos[0].remove();
                     document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
                     document.getElementByClassName('about_page').style.backgroundSize = "cover";
                     document.getElementByClassName('about_page').style.filter = "grayscale(100%)";

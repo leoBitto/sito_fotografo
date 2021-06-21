@@ -50,22 +50,18 @@
         <script>
             // script modifica lo sfondo sotto i 650px
             // controlla se sei sotto i 650px
-            if($(window).width() < 650){
+            if(window.innerWidth < 650){
                 // leva tutti e tre i video
-                document.getElementByClassName("video").remove()
+                var videos = document.getElementByClassName("video")
+                while(videos.length > 0) videos[0].remove()
                 // aggiungi video come sfondo a menu
-                var video = $('<video />', {
-                    class: 'video',
-                }).prop({
-                    muted: true,
-                    autoplay: true,
-                    loop: true,
-                });
-                var src = $('<source />', {
-                    type: 'video/mp4', 
-                    src: "{% static '/video/portfolio.mp4' %}"
-                }).appendTo(video);
-                video.appendTo($('.menu'));
+                // crea source
+                var path = '/video/portfolio.mp4';
+                var type = 'video/mp4';
+                var src = "<source src='{% static" + path + "%} type=" + type + " /></video>";
+                //crea video tag
+                var video = '<video class="video" autoplay muted loop>' + src + '</video>';
+                video.appendTo(document.getElementByClassName('menu'));
             }
         </script>
         <script>
@@ -83,7 +79,8 @@
                 }
                 else if(navigator.userAgent.indexOf("Safari") != -1)
                 {
-                    document.getElementByClassName('video').remove();
+                    var videos = document.getElementByClassName('video');
+                    while(videos.length > 0) videos[0].remove();
                     document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
                     document.getElementByClassName('about_page').style.backgroundSize = "cover";
 
@@ -96,7 +93,8 @@
                 }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
-                    document.getElementByClassName('video').remove();
+                    var videos = document.getElementByClassName('video');
+                    while(videos.length > 0) videos[0].remove();
                     document.getElementByClassName('about_page').style.backgroundImage = "url({% static '/video/about.gif' %})";
                     document.getElementByClassName('about_page').style.backgroundSize = "cover";
 
