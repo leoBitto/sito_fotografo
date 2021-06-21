@@ -55,13 +55,15 @@
                 var videos = document.getElementByClassName("video")
                 while(videos.length > 0) videos[0].remove()
                 // aggiungi video come sfondo a menu
-                // crea source
-                var path = '/video/portfolio.mp4';
-                var type = 'video/mp4';
-                var src = "<source src='{% static" + path + "%} type=" + type + " /></video>";
-                //crea video tag
-                var video = '<video class="video" autoplay muted loop>' + src + '</video>';
-                video.appendTo(document.getElementByClassName('menu'));
+                // crea video tag
+                var video = document.createElement('video');
+                video.src = "{% static "/video/portfolio.mp4" %}"
+                video.autoplay = true;
+                video.muted = true;
+                video.loop = true;
+                video.classList.add("video");
+                //appendi a menu
+                document.getElementByClassName('menu')[0].appendChild(video);
             }
         </script>
         <script>
