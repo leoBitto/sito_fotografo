@@ -4,38 +4,32 @@
     font-family: "Win";
     src:url('../fonts/w95fa.woff');
 }
-.navbar a{
+
+.navbar{
+    width: 100vw;
+    font-family: "Win";
+    font-size: 1.25em;
+    color:black !important;
+    background-color: rgb(233, 232, 232);
+}
+.navbar-brand{
+    color: black !important;
+}
+a{
     color:black !important;
     font-size: 1.25em !important;
 }
-.navbar{
-    width: 100vw;
-    padding: 0px !important;
-    font-family: "Win";
-    font-size: 1.25em;
-    color:black;
-    background-color: rgb(247, 247, 247);
-}
-.container-fluid{
-    padding:0px !important;
-}
-.navbar-brand{
-    width:50%;
-    padding-left: 10px;
-}
-.navbar-nav{
-    width:100%;
-    background-color: rgb(247, 247, 247);
-}
-.collapse{
-    justify-content: flex-end;
-}
 
-.box{
-    width:33%;
+.tasto{
+    /*width:33%;
     box-shadow: 
-        5px 0px 2.2px rgba(0, 0, 0, 0.034) inset
+        5px 0px 2.2px rgba(0, 0, 0, 0.034) inset;
+    */
+    background-color: rgb(233, 232, 232);
+    color:black !important;
+    -webkit-box-shadow: 2px 2px 1px 1px #000000, inset 2px 2px 1px 1px #FFFFFF; 
+    box-shadow: 2px 2px 1px 1px #000000, inset 2px 2px 1px 1px #FFFFFF;
 }
-.box:hover{
-    background-color: rgb(100,100,100);
+.tasto:hover{
+    background-color: rgb(165, 165, 165);
 }

@@ -7,11 +7,6 @@ def index(request):
     context={}
     return render(request, 'index.html', context)
     
-#pagina menu
-def menu(request):
-    context={}
-    return render(request, 'menu.html', context)
-
 
 #pagina portfolio
 def portfolio(request):
