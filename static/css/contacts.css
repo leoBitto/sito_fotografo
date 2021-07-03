@@ -7,39 +7,5 @@ html body{
     background-color: rgb(124, 124, 124);
     font-family: "Neue";
     color: white;
-    width: 100vw;
-    height:100vh;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    -webkit-flex-flow: column;
-    flex-flow: column;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
 }
 
-.contact{
-   text-align: center;
-   margin-top: 30px;
-   font-size: 1.5em;
-}
-.container{
-    position:relative;
-    height: 90vh;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    -webkit-flex-flow: column;
-    flex-flow: column;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-}
-
-@media only screen and (max-width:500px){
-
-    .contact{
-        font-size: 1em;
-    }
-}
