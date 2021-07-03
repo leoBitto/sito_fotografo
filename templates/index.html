@@ -26,19 +26,19 @@
                         <video class="video" autoplay muted loop>
                             <source src="{% static '/video/about.mp4' %}" type="video/mp4" />
                         </video>
-                        <a href="{% url 'about' %}" id="aboutbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                        <a href="{% url 'main:about' %}" id="aboutbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
                     </div>
                     <div id="portfolio" class="col-xs-12 col-sm-4 p-0">
                         <video class="video" autoplay muted loop>
                             <source src="{% static '/video/portfolio.mp4' %}" type="video/mp4" />
                         </video>
-                        <a href="{% url 'portfolio' %}" id="portfoliobtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                        <a href="{% url 'main:portfolio' %}" id="portfoliobtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
                     </div>
                     <div id="contacts" class="col-xs-12 col-sm-4 p-0">
                         <video class="video" autoplay muted loop>
                             <source src="{% static '/video/contact.mp4' %}" type="video/mp4" />
                         </video>
-                        <a href="{% url 'contacts' %}" id="contactsbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                        <a href="{% url 'main:contacts' %}" id="contactsbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
                     </div>
                 </div><!-- .row -->
             </div>    

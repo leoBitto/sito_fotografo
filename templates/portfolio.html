@@ -21,7 +21,7 @@
             <div class="column">
                 <!-- inserisci ciclo for -->
                 {% for foto in foto_dispari %}
-                <a href="{% url 'photo' pk=foto.pk %}">
+                <a href="{% url 'main:photo' pk=foto.pk %}">
                     <img src="{{ media_url }}{{ foto.url_immagine }}">
                 </a>
                 {% endfor %}
