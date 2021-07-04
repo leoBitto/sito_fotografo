@@ -8,7 +8,7 @@ html body{
     font-family: "Neue";
     color: white;
 }
-.b{
+#flexs{
     flex:0 0 auto;
 }
 
