@@ -1,11 +1,10 @@
-.footer p{
-    font-size: 0.8em;
+
+
+#myname>a{
+    color:white !important;
+    font-size: 0.8em !important;
 }
 
-#myname, a{
-    color:white !important;
-    font-size: 0.8em;
-}
 
 #instaLogo{
     width:3em;

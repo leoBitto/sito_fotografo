@@ -5,12 +5,14 @@
     src:url('../fonts/w95fa.woff');
 }
 
+
 .navbar{
     width: 100vw;
     font-family: "Win";
     font-size: 1.25em;
     color:black !important;
     background-color: rgb(233, 232, 232);
+    flex:0 0 auto;
 }
 .navbar-brand{
     color: black !important;
