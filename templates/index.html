@@ -23,22 +23,31 @@
             <div id="menu" class="cover-container d-flex w-100 h-100 p-0 flex-column flex-sm-row container-fluid  align-items-center justify-content-center ">
                 <div class="row container-fluid p-0 h-100">
                     <div id="about" class="col-xs-12 col-sm-4 p-0 ">
-                        <video class="video" autoplay muted loop>
+
+                      <!--  <video class="video" autoplay muted loop>
                             <source src="{% static '/video/about.mp4' %}" type="video/mp4" />
-                        </video>
+                        </video>-->
+
                         <a href="{% url 'main:about' %}" id="aboutbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                    
                     </div>
                     <div id="portfolio" class="col-xs-12 col-sm-4 p-0">
-                        <video class="video" autoplay muted loop>
+
+                       <!-- <video class="video" autoplay muted loop>
                             <source src="{% static '/video/portfolio.mp4' %}" type="video/mp4" />
-                        </video>
+                        </video>-->
+
                         <a href="{% url 'main:portfolio' %}" id="portfoliobtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                    
                     </div>
                     <div id="contacts" class="col-xs-12 col-sm-4 p-0">
-                        <video class="video" autoplay muted loop>
+
+                       <!-- <video class="video" autoplay muted loop>
                             <source src="{% static '/video/contact.mp4' %}" type="video/mp4" />
-                        </video>
+                        </video> -->
+
                         <a href="{% url 'main:contacts' %}" id="contactsbtn" class="btn text-center w-100 h-100 p-0 container-fluid align-items-center justify-content-center d-flex"></a>
+                    
                     </div>
                 </div><!-- .row -->
             </div>    
@@ -49,121 +58,53 @@
         <script>
 
             function handleBackground() { 
-              /*  if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-                {
-                   if(window.innerWidth < 576){
-                        // leva tutti e tre i video
-                        var videos = document.getElementsByClassName("video")
-                        while(videos.length > 0) videos[0].remove()
-                        // aggiungi video come sfondo a menu
-                        // crea video tag
-                        var video = document.createElement('video');
-                        video.src = "../sito_fotografo/sito/static/video/portfolio.mp4"
-                        video.autoplay = true;
-                        video.muted = true;
-                        video.loop = true;
-                        video.classList.add("video");
-                        //appendi a menu
-                        document.getElementById('menu').appendChild(video);
-                    }
-                }
-                else if(navigator.userAgent.indexOf("Chrome") != -1 )
-                {
-                   console.log("chrome");
-                   if(window.innerWidth < 576){
-                        // leva tutti e tre i video
-                        var videos = document.getElementsByClassName("video")
-                        while(videos.length > 0) videos[0].remove()
-                        // aggiungi video come sfondo a menu
-                        // crea video tag
-                        var video = document.createElement('video');
-                        video.src = "../static/video/portfolio.mp4"
-                        video.autoplay = true;
-                        video.muted = true;
-                        video.loop = true;
-                        video.classList.add("video");
-                        //appendi a menu
-                        document.getElementById('menu').appendChild(video);
-                    }
-                }
-                else if(navigator.userAgent.indexOf("Safari") != -1)
-                {
-                    console.log("caso sbagliato");
-                    var videos = document.getElementsByClassName('video');
-                    while(videos.length > 0) videos[0].remove();
-                    if(window.innerWidth < 576){
-                        document.getElementById('menu').style.backgroundImage = "url('../sito_fotografo/sito/static/video/portfolio.gif')";
-                        document.getElementById('menu').style.backgroundSize = "cover";
-                    }else{
-                        document.getElementsByClassName('about_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/about.gif')";
-                        document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
 
-                        document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/portfolio.gif')";
-                        document.getElementsByClassName('portfolio_page')[0].style.backgroundSize = "cover";
-                        
-                        document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/contact.gif')";
-                        document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
-                    }
+                if(window.innerWidth < 576){
+
+                    // leva tutti e tre i video
+                    //var videos = document.getElementsByClassName("video")
+                    //while(videos.length > 0) videos[0].remove()
+                    // aggiungi video come sfondo a menu
+                    // crea video tag
+                    var video = document.createElement('video');
+                    video.src = "{% static '/video/portfolio.mp4' %}"
+                    video.autoplay = true;
+                    video.muted = true;
+                    video.loop = true;
+                    video.classList.add("video");
+                    //appendi a menu
+                    document.getElementById('menu').appendChild(video);
+
+                }else{
+                    console.log("3 video");
+
+                    var videoAbout = document.createElement('video');
+                    videoAbout.src = "{% static '/video/about.mp4' %}"
+                    videoAbout.autoplay = true;
+                    videoAbout.muted = true;
+                    videoAbout.loop = true;
+                    videoAbout.classList.add("video");
+                    document.getElementById('about').prepend(videoAbout);
+
+                    var videoPortfolio = document.createElement('video');
+                    videoPortfolio.src = "{% static '/video/portfolio.mp4' %}"
+                    videoPortfolio.autoplay = true;
+                    videoPortfolio.muted = true;
+                    videoPortfolio.loop = true;
+                    videoPortfolio.classList.add("video");
+                    document.getElementById('portfolio').prepend(videoPortfolio);
+
+                    var videoContacts = document.createElement('video');
+                    videoContacts.src = "{% static '/video/contact.mp4' %}"
+                    videoContacts.autoplay = true;
+                    videoContacts.muted = true;
+                    videoContacts.loop = true;
+                    videoContacts.classList.add("video");
+                    document.getElementById('contacts').prepend(videoContacts);
                     
                 }
-                else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-                {
 
-                    console.log("caso sbagliato");
-                    var videos = document.getElementsByClassName('video');
-                    while(videos.length > 0) videos[0].remove();
-                    if(window.innerWidth < 576){
-                        document.getElementById('menu').style.backgroundImage = "url('../sito_fotografo/sito/static/video/portfolio.gif')";
-                        document.getElementById('menu').style.backgroundSize = "cover";
-                    }else{
-                        document.getElementsByClassName('about_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/about.gif')";
-                        document.getElementsByClassName('about_page')[0].style.backgroundSize = "cover";
-
-                        document.getElementsByClassName('portfolio_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/portfolio.gif')";
-                        document.getElementsByClassName('portfolio_page')[0].style.backgroundSize = "cover";
-                        
-                        document.getElementsByClassName('contacts_page')[0].style.backgroundImage = "url('../sito_fotografo/sito/static/video/contact.gif')";
-                        document.getElementsByClassName('contacts_page')[0].style.backgroundSize = "cover";
-                    }
-                }
-                else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-                {
-                    if(window.innerWidth < 576){
-                        // leva tutti e tre i video
-                        var videos = document.getElementsByClassName("video")
-                        while(videos.length > 0) videos[0].remove()
-                        // aggiungi video come sfondo a menu
-                        // crea video tag
-                        var video = document.createElement('video');
-                        video.src = "../sito_fotografo/sito/static/video/portfolio.mp4"
-                        video.autoplay = true;
-                        video.muted = true;
-                        video.loop = true;
-                        video.classList.add("video");
-                        //appendi a menu
-                        document.getElementById('menu').appendChild(video);
-                    }
-                }  
-                else 
-                {
-                    console.log("sono arrivato al caso giusto");*/
-                    if(window.innerWidth < 576){
-                        // leva tutti e tre i video
-                        var videos = document.getElementsByClassName("video")
-                        while(videos.length > 0) videos[0].remove()
-                        // aggiungi video come sfondo a menu
-                        // crea video tag
-                        var video = document.createElement('video');
-                        video.src = "{% static '/video/portfolio.mp4' %}"
-                        video.autoplay = true;
-                        video.muted = true;
-                        video.loop = true;
-                        video.classList.add("video");
-                        //appendi a menu
-                        document.getElementById('menu').appendChild(video);
-                    }
-                }
-           // }
+            }
 
         </script>
            <!-- 2. ascolto dell'evento click su overlay-->
