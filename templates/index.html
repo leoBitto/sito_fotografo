@@ -53,20 +53,21 @@
                     video.autoplay = true;
                     video.muted = true;
                     video.loop = true;
-                    video.playsinline = true;
+                    video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+                    video.setAttribute('playsinline', 'playsinline');
                     video.classList.add("video");
                     //appendi a menu
                     document.getElementById('menu').appendChild(video);
 
                 }else{
                     
-
                     var videoAbout = document.createElement('video');
                     videoAbout.src = "{% static '/video/about.mp4' %}"
                     videoAbout.autoplay = true;
                     videoAbout.muted = true;
                     videoAbout.loop = true;
-                    videoAbout.playsinline = true;
+                    videoAbout.setAttribute('webkit-playsinline', 'webkit-playsinline');
+                    videoAbout.setAttribute('playsinline', 'playsinline');
                     videoAbout.classList.add("video");
                     document.getElementById('about').prepend(videoAbout);
 
@@ -75,7 +76,8 @@
                     videoPortfolio.autoplay = true;
                     videoPortfolio.muted = true;
                     videoPortfolio.loop = true;
-                    videoPortfolio.playsinline = true;
+                    videoPortfolio.setAttribute('webkit-playsinline', 'webkit-playsinline');
+                    videoPortfolio.setAttribute('playsinline', 'playsinline');
                     videoPortfolio.classList.add("video");
                     document.getElementById('portfolio').prepend(videoPortfolio);
 
@@ -84,7 +86,8 @@
                     videoContacts.autoplay = true;
                     videoContacts.muted = true;
                     videoContacts.loop = true;
-                    videoContacts.playsinline = true;
+                    videoContacts.setAttribute('webkit-playsinline', 'webkit-playsinline');
+                    videoContacts.setAttribute('playsinline', 'playsinline');
                     videoContacts.classList.add("video");
                     document.getElementById('contacts').prepend(videoContacts);
                     
