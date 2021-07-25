@@ -1,17 +1,19 @@
 
-
-#myname>a{
+#myname{
     color:white !important;
-    font-size: 0.8em !important;
+    font-size: 0.5em !important;
+}
+#myname>a{
+    color:white!important;
+    text-decoration: none!important;
 }
 
-
-#instaLogo{
-    width:3em;
+img#instaLogo{
+    width:40px;
 }
 
 @media only screen and (max-width:500px){
-    .insta_logo img{
-        width:3.5em;
+    img#instaLogo{
+        width:30px;
     }
 }
