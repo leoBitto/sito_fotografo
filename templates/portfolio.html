@@ -21,7 +21,7 @@
             <div class="col-sm-6 col-12 d-flex  flex-column">
                 <!-- inserisci ciclo for -->
                 {% for foto in foto_dispari %}
-                <a href="{% url 'main:photo' pk=foto.pk %}">
+                <a name="{{ foto.posizione }}" href="{% url 'main:photo' pk=foto.pk %}">
                     <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
                 </a>
                 {% endfor %}
@@ -30,7 +30,7 @@
             <div class="col-sm-6 col-12 d-flex flex-column">
                 <!-- inserisci ciclo for -->
                 {% for foto in foto_pari %}
-                <a href="{% url 'main:photo' pk=foto.pk %}">
+                <a name="{{ foto.posizione }}" href="{% url 'main:photo' pk=foto.pk %}">
                     <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
                 </a>
                 {% endfor %}
