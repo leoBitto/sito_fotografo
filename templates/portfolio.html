@@ -16,26 +16,33 @@
     <body class="d-flex h-100 flex-column justify-content-between">
         
         {% include 'navbar.html' %}
-        
-        <div class="container d-sm-flex d-block my-2">
-            <div class="col-sm-6 col-12 d-flex  flex-column">
-                <!-- inserisci ciclo for -->
-                {% for foto in foto_dispari %}
-                <a name="{{ foto.posizione }}" href="{% url 'main:photo' pk=foto.pk %}">
-                    <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
-                </a>
-                {% endfor %}
-            </div>
 
-            <div class="col-sm-6 col-12 d-flex flex-column">
-                <!-- inserisci ciclo for -->
-                {% for foto in foto_pari %}
-                <a name="{{ foto.posizione }}" href="{% url 'main:photo' pk=foto.pk %}">
-                    <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
-                </a>
-                {% endfor %}
+        <!-- render section -->
+        {% for s in sezioni %}
+            <div class="container-fluid d-sm-flex flex-wrap justify-content-around p-0 my-2">
+                <!-- render photo in section -->
+                <!-- se le foto nella sezione e' una sola crea una colonna-->
+                {% if s.photo_set.count == 1 %}
+                    {% for p in s.photo_set.all %}
+                        <img class="d-block col-12 col-sm-6 p-3 m-auto" src="{{ media_url }}{{ p.url_immagine }}">
+                    {% endfor %}
+                <!-- in caso contrario crea due colonne-->
+                {% else %}
+                    <!--colonna a sinistra delle foto pari-->
+                    <div class="col-sm-6 col-12 d-flex flex-column">
+                        {% for foto in s.pari %}
+                            <img class="d-block col-12 p-4" src="{{ media_url }}{{ foto.url_immagine }}">
+                        {% endfor %}
+                    </div>
+                    <!--colonna a destra delle foto dispari-->
+                    <div class="col-sm-6 col-12 d-flex flex-column">
+                        {% for foto in s.dispari %}
+                            <img class="d-block col-12 p-4" src="{{ media_url }}{{ foto.url_immagine }}">
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
-        </div>
+        {% endfor %}
         
         {% include 'footer.html' %}
 
