@@ -1,5 +1,5 @@
 from django.db import models
-from taggit.managers import TaggableManager
+#from taggit.managers import TaggableManager
 
 
 class Sezione(models.Model):
@@ -50,7 +50,7 @@ class Photo(models.Model):
         null=True)
     sezione = models.ForeignKey(Sezione, models.SET_NULL, blank=True, null=True)
     posizione = models.IntegerField(choices=[(1,1),(2,2),(3,3),(4,4)], blank=True, null=True, default=1)
-    tags = TaggableManager(blank=True)
+    #tags = TaggableManager(blank=True)
 
     def __str__(self):
         return str(self.url_immagine) + '(p:' + str(self.posizione) + ',s:' + str(self.sezione) + ')'
