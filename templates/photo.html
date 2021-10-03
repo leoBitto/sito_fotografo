@@ -14,7 +14,7 @@
     <body>
                 
         <div id="photo">
-            <a href="{% url 'main:portfolio' %}#{{ foto.posizione }}">
+            <a href="{% url 'main:portfolio' %}#{{ foto.pk }}">
                 <img src="{{ media_url }}{{ foto.url_immagine }}">
             </a>
         </div>
