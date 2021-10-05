@@ -1,0 +1,17 @@
+data;ore
+15/4/2021;1
+16/4/2021;3
+17/4/2021;2.5
+23/4/2021;3.5
+24/4/2021;4
+26/4/2021;2
+28/4/2021;2
+
+
+
+admin info:
+user : leonardo
+psswd : bepcakacpu91
+
+git token:
+     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
