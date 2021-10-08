@@ -49,7 +49,7 @@ class Photo(models.Model):
         max_length=100,
         null=True)
     sezione = models.ForeignKey(Sezione, models.SET_NULL, blank=True, null=True)
-    posizione = models.IntegerField(choices=[(1,1),(2,2),(3,3),(4,4)], blank=True, null=True, default=1)
+    posizione = models.IntegerField(choices=[(1,1),(2,2),(3,3),(4,4)], blank=True, null=True, default='1')
     #tags = TaggableManager(blank=True)
 
     def __str__(self):
