@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.html import format_html
+from django.contrib import admin
 #from taggit.managers import TaggableManager
 
 
@@ -38,6 +40,10 @@ class Sezione(models.Model):
 
         return pos_dispari
 
+    @admin.display
+    def links(self):
+        return list(self.photo_set.all())
+        
 
 class Photo(models.Model):
     url_immagine = models.ImageField(upload_to='', null=True, blank=True)
@@ -52,8 +58,12 @@ class Photo(models.Model):
     posizione = models.IntegerField(choices=[(1,1),(2,2),(3,3),(4,4)], blank=True, null=True, default='1')
     #tags = TaggableManager(blank=True)
 
+    class Meta:
+        ordering = ['posizione']
+
     def __str__(self):
-        return str(self.url_immagine) + '(p:' + str(self.posizione) + ',s:' + str(self.sezione) + ')'
+        return str(self.url_immagine) + '(p:' + str(self.posizione) + ' )'
+
 
 class Description(models.Model):
     testo = models.TextField(blank=True, null=True)
