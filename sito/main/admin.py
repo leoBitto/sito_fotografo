@@ -22,7 +22,7 @@ class DescriptionAdmin(admin.ModelAdmin):
 
 
 class SezioneAdmin(admin.ModelAdmin):
-    list_display = ('posizione', )
+    list_display = ('posizione', 'links')
 
 
 admin.site.register(Photo, PhotoAdmin)
