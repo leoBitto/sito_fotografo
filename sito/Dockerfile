@@ -25,3 +25,6 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
+
+EXPOSE 8000
+CMD ["gunicorn", "sito.wsgi:application", "--bind", "0.0.0.0:8000"]
