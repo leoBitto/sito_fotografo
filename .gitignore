@@ -1,6 +1,9 @@
 # token di accesso a github da server
 macToken.txt
 
+#token server
+*.pem
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
