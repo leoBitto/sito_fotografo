@@ -1,9 +1,6 @@
 # pull official base image
 FROM python:3.9.6
 
-# set work directory its an absolute path
-#WORKDIR /usr/src/app
-
 # create the appropriate directories
 ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
@@ -26,5 +23,9 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . .
 
+VOLUME /home/app/web/static
+VOLUME /home/app/web/media
+
 EXPOSE 8000
+
 CMD ["gunicorn", "sito.wsgi:application", "--bind", "0.0.0.0:8000"]

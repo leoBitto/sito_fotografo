@@ -13,8 +13,4 @@ admin info:
 user : leonardo
 psswd : bepcakacpu91
 
-git token:
-     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
-
-git token aws server:
-     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
+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
