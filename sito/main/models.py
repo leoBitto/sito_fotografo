@@ -23,8 +23,6 @@ class Sezione(models.Model):
             if f.posizione%2 == 0:
                 pos_pari.append(f)
 
-        print(pos_pari)
-
         return pos_pari
     
     @property
@@ -36,14 +34,7 @@ class Sezione(models.Model):
             if f.posizione%2 == 1:
                 pos_dispari.append(f)
 
-        print(pos_dispari)
-
         return pos_dispari
-
-    @admin.display
-    def links(self):
-        return self.photo_set.all()
-        
         
 
 class Photo(models.Model):
