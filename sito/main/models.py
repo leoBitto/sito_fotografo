@@ -42,7 +42,8 @@ class Sezione(models.Model):
 
     @admin.display
     def links(self):
-        return list(self.photo_set.all())
+        return self.photo_set.all()
+        
         
 
 class Photo(models.Model):
@@ -62,7 +63,7 @@ class Photo(models.Model):
         ordering = ['posizione']
 
     def __str__(self):
-        return str(self.url_immagine) + '(p:' + str(self.posizione) + ' )'
+        return str(self.url_immagine)
 
 
 class Description(models.Model):
