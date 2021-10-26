@@ -47,7 +47,7 @@
                     var video = document.createElement('video');
                     video.src = "{% static '/video/portfolio.mp4' %}"
                     video.autoplay = true;
-                    video.setAttribute('muted', true);
+                    video.muted = true;
                     video.loop = true;
                     video.setAttribute('webkit-playsinline', 'webkit-playsinline');
                     video.setAttribute('playsinline', 'playsinline');
