@@ -42,16 +42,22 @@
             function handleBackground() { 
 
                 if(window.innerWidth < 576){
+                    
+
+                    // set the video attributes using javascript as per the
+                    // webkit Policy
 
                     // crea video tag
                     var video = document.createElement('video');
-                    video.src = "{% static '/video/about.mp4' %}"
+                    video.src = "{% static '/video/portfolio.mp4' %}"
                     video.autoplay = true;
                     video.muted = true;
                     video.setAttribute('muted', 'muted');
                     video.loop = true;
                     video.setAttribute('webkit-playsinline', 'webkit-playsinline');
                     video.setAttribute('playsinline', 'playsinline');
+                    video.controls = false;
+                    video.playsinline = true;
                     video.classList.add("video");
                     //appendi a menu
                     document.getElementById('menu').appendChild(video);
