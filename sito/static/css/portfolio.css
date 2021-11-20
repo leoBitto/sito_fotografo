@@ -8,6 +8,8 @@ html body{
     font-family: "Neue";
     color: white;
     overflow-x: hidden;
+    overflow-anchor: none!important;
 }
+
 
 
