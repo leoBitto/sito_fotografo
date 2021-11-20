@@ -19,30 +19,30 @@
 
         <!-- render section -->
         {% for s in sezioni %}
-            <div class="container-fluid d-sm-flex flex-wrap justify-content-around p-0 my-2">
+            <div class="container-fluid d-flex flex-wrap justify-content-around p-0 my-2">
                 <!-- render photo in section -->
                 <!-- se le foto nella sezione e' una sola crea una colonna-->
                 {% if s.photo_set.count == 1 %}
                     {% for p in s.photo_set.all %}
                         <a href="{% url 'main:photo' p.pk %}" id="{{ p.pk }}">
-                            <img class="d-block col-12 col-sm-6 p-3 m-auto" src="{{ media_url }}{{ p.url_immagine }}">
+                            <img class="d-block col-6 p-2 m-auto" src="{{ media_url }}{{ p.url_immagine }}">
                         </a>
                     {% endfor %}
                 <!-- in caso contrario crea due colonne-->
                 {% else %}
                     <!--colonna a sinistra delle foto pari-->
-                    <div class="col-sm-6 col-12 d-flex flex-column">
+                    <div class="col-6 d-flex flex-column">
                         {% for foto in s.pari %}
                             <a href="{% url 'main:photo' foto.pk %}" id="{{ foto.pk }}">
-                                <img class="d-block col-12 p-4" src="{{ media_url }}{{ foto.url_immagine }}">
+                                <img class="d-block col-12 p-1 p-sm-3" src="{{ media_url }}{{ foto.url_immagine }}">
                             </a>
                         {% endfor %}
                     </div>
                     <!--colonna a destra delle foto dispari-->
-                    <div class="col-sm-6 col-12 d-flex flex-column">
+                    <div class="col-6 d-flex flex-column">
                         {% for foto in s.dispari %}
                             <a href="{% url 'main:photo' foto.pk %}" id="{{ foto.pk }}">
-                                <img class="d-block col-12 p-4" src="{{ media_url }}{{ foto.url_immagine }}">
+                                <img class="d-block col-12 p-1 p-sm-3" src="{{ media_url }}{{ foto.url_immagine }}">
                             </a>
                         {% endfor %}
                     </div>
