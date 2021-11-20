@@ -1,6 +1,6 @@
 # token di accesso a github da server
 macToken.txt
-
+nginx/
 ore.txt
 #token server
 *.pem
