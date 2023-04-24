@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
+html body{
+    background-color: rgb(124, 124, 124);
+    font-family: "Neue";
+    color: white;
+}
+.text{
+    font-size:0.9em;
+}
+
+@media only screen and (min-width: 576px) {
+    .text{font-size: 1em;}
+}
+
+@media only screen and (min-width: 768px) {
+    .text{font-size: 1.1em;}
+}
+
+@media only screen and (min-width: 992px) {
+    .text{font-size: 1.2em;}
+}
+
+@media only screen and (min-width: 1200px) {
+    .text{font-size: 1.3em;}
+}
+
+@media only screen and (min-width: 1400px) {
+    .text{font-size: 1.5em;}
+}
+
+@media only screen and (min-width: 2000px) {
+    .text{font-size: 1.8em;}
+}
+
+#flexs{
+    flex:0 0 auto;
+}
+
+
+
+

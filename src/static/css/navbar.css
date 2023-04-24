@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+    font-family: "Win";
+    src:url('../fonts/w95fa.woff');
+}
+
+
+.navbar{
+    width: 100vw;
+    font-family: "Win";
+    font-size: 1.25em;
+    color:black !important;
+    background-color: rgb(233, 232, 232);
+    flex:0 0 auto;
+}
+.navbar-brand{
+    color: black !important;
+}
+a{
+    color:black !important;
+    font-size: 1.25em !important;
+}
+
+.tasto{
+    /*width:33%;
+    box-shadow: 
+        5px 0px 2.2px rgba(0, 0, 0, 0.034) inset;
+    */
+    background-color: rgb(233, 232, 232);
+    color:black !important;
+    -webkit-box-shadow: 2px 2px 1px 1px #000000, inset 2px 2px 1px 1px #FFFFFF; 
+    box-shadow: 2px 2px 1px 1px #000000, inset 2px 2px 1px 1px #FFFFFF;
+}
+.tasto:hover{
+    background-color: rgb(165, 165, 165);
+}

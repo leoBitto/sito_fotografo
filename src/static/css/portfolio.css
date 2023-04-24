@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
+html body{
+    background-color: rgb(124, 124, 124);
+    font-family: "Neue";
+    color: white;
+    overflow-x: hidden;
+    overflow-anchor: none!important;
+}
+
+
+

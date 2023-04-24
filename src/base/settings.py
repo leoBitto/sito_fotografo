@@ -36,7 +36,9 @@ ALLOWED_HOSTS = [
     '127.0.0.1', 
     'localhost', 
     # add the IP address and the domain name of the server
-
+    "www.giuliopierini.com",
+    "[::1]",
+    
     ]
 
 
@@ -50,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # add here the app names
-
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 
 # Default primary key field type

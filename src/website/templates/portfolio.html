@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <div >
+
+        <!-- render section -->
+        {% for s in sezioni %}
+            <div class="container-fluid d-flex flex-wrap justify-content-around p-0 my-2">
+                <!-- render photo in section -->
+                <!-- se le foto nella sezione e' una sola crea una colonna-->
+                {% if s.photo_set.count == 1 %}
+                    {% for p in s.photo_set.all %}
+                        <a href="{% url 'website:photo' p.pk %}" id="{{ p.pk }}">
+                            <img class="d-block col-6 p-3 m-auto" src="{{ media_url }}{{ p.url_immagine }}">
+                        </a>
+                    {% endfor %}
+                <!-- in caso contrario crea due colonne-->
+                {% else %}
+                    <!--colonna a sinistra delle foto pari-->
+                    <div class="col-6">
+                        {% for foto in s.pari %}
+                            <a href="{% url 'website:photo' foto.pk %}" id="{{ foto.pk }}">
+                                <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <!--colonna a destra delle foto dispari-->
+                    <div class="col-6">
+                        {% for foto in s.dispari %}
+                            <a href="{% url 'website:photo' foto.pk %}" id="{{ foto.pk }}">
+                                <img class="d-block col-12 p-3" src="{{ media_url }}{{ foto.url_immagine }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}

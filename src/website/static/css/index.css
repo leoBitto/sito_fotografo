@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Neue";
+    src: url('../fonts/NeueHaasDisplayMediu.ttf');
+}
+
+@font-face {
+    font-family: "Win";
+    src:url('../fonts/w95fa.woff');
+}
+
+.video{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    filter: grayscale(100%) brightness(50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+a:hover,
+a:visited,
+a:link, 
+a:active, 
+a:focus, 
+a:focus:hover
+{
+    color:white !important;
+    text-decoration: none !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.overlay {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    font-family: "Neue";
+    color:white !important;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    /*background: rgba(39, 42, 43, 0.8);
+    transition: opacity 200ms ease-in-out;
+    border-radius: 4px;
+    margin: -15px 0 0 -15px;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    
+}
+
+.overlay h1{
+    font-family: "Neue";
+    color:white !important;
+    font-size: 7em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.overlay h3{
+    font-family: "Neue";
+    color:white !important;
+    font-size:2.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.filter_overlay{
+    opacity:0.4;
+    background-image: url('../images/scacchiera2.jpeg');
+    width:100%;
+    height: 100%;
+    position:absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1;
+}
+
+.overlay2{
+    height:100%;
+    width:100%;
+    font-size:3.5em;
+    font-family: "Win";
+    color:white !important;
+    display:none;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position:relative;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.overlay2:hover{
+    opacity:0;
+}
+
+@media only screen and (max-width: 850px) {
+    .overlay h1{
+        font-size: 6em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .overlay h1{
+        font-size: 5em;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+    .overlay h1{
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .overlay h1{
+        font-size: 2.5em;
+    }
+    .overlay2{
+        background-color: transparent;
+    }
+}

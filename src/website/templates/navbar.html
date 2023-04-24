@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-light p-2 ">
+        
+    <a class="navbar-brand m-0 px-1 tasto py-0" href="{% url 'website:index' %}">C:/Giulio Pierini</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav ">
+            <li class="nav-item m-2">
+                <a class="nav-link tasto py-0 px-2" href="{% url 'website:about' %}">:/about</a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link tasto py-0 px-2" href="{% url 'website:portfolio' %}">:/portfolio</a>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link tasto py-0 px-2" href="{% url 'website:contacts' %}">:/contacts</a>
+            </li>
+        </ul>
+    </div>
+    
+</nav>
