@@ -30,7 +30,7 @@ def photo(request, pk):
 
 #pagina about
 def about(request):
-    photo = Photo.objects.get(ruolo='immagine_profilo')
+    photo = Photo.objects.get(immagine_profilo=True)
     description = Description.objects.all()
     context={
         'photo':photo,
