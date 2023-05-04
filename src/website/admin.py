@@ -49,15 +49,15 @@ class SezioneAdmin(admin.ModelAdmin):
         urls = obj.photo_set.all()
         s = '<div style="box-sizing: border-box; display:flex; flex-wrap:wrap; justify-content: space-around; margin-top:0.5rem; margin-bottom:0.5rem; padding:0">'
         if urls.count() == 1 :
-            s += '<img src="/media/{0}" style="max-width:50%; padding:3rem; margin:auto" />'.format(urls[0])
+            s += '<img src="/media/{0}" style="max-width:100px; padding:3rem; margin:auto" />'.format(urls[0])
         else:
-            s += '<div style="flex: 0 0 50%; max-width: 50%; display:block;">'
+            s += '<div style="flex: 0 0 50%; max-width: 50%;  display:block;">'
             for par in obj.pari:
-                s += '<img src="/media/{0}" style="display:block; max-width:100%; padding:1em 0 1em 0;" />'.format(par)
+                s += '<img src="/media/{0}" style="display:block; max-width:100px; padding:1em 0 1em 0; margin:auto" />'.format(par)
             s += '</div>'
             s += '<div style="flex: 0 0 50%; max-width: 50%; display:block;">'
             for dis in obj.dispari:
-                s += '<img src="/media/{0}" style="display:block; max-width:100%; padding:1em 0 1em 0;" />'.format(dis)
+                s += '<img src="/media/{0}" style="display:block; max-width:100px; padding:1em 0 1em 0; margin:auto" />'.format(dis)
             s += '</div>'
              
         s += '</div>'
