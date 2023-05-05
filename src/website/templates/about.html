@@ -4,7 +4,9 @@
         
         <div style="flex:0 0 auto" id="flexs" class="d-flex flex-sm-row-reverse flex-column container">
             <div class="d-flex align-items-center justify-content-center container-fluid p-0">
+                {% if photo %}
                 <img class="m-auto d-block img-fluid col-8 py-4" src="{{ media_url }}{{ photo.url_immagine }}">
+                {% endif %}
             </div>
 
             <div class="align-items-center container-fluid">
